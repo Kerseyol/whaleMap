@@ -1,3 +1,6 @@
+@import url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css');
+
+
 .App {
   text-align: center;
 }
@@ -5,6 +8,16 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+}
+
+.mapApp {
+  height: 400px;
+  width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
