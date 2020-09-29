@@ -1,29 +1,271 @@
 @import url('https://unpkg.com/leaflet@1.7.1/dist/leaflet.css');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Nothing+You+Could+Do&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunshiney&display=swap');
 
-
-.App {
+body {
+  font-family: Calligraffitti, cursive;
   text-align: center;
+  background-image: url(./images/scrollBackground.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.titleBox {
+  display: flex;
 }
 
-.map {
-  height: 400px;
-  width: 100%;
+.title {
+  height: 10vh;
+  margin: 0 auto;
+  margin-top: 5vh;
+  padding: 0px 35px 20px 35px;
+  background-image: url(./images/wavesPattern.jpg); 
+  background-repeat: no-repeat; 
+  border: 40px solid transparent;
+  border-image: url(./images/woodBorder.png) 10% round;
 }
 
-.mapApp {
-  height: 400px;
-  width: 100%;
+.title h1 {
+  font-size: 2.4rem;
+  background-color: rgba(255, 239, 213, 1);
+  padding: 10px 10px 0px 10px;
+  background-image: url(./images/nauticalPaper.jpg);
+}
+
+.explanationContainer {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-image: url(./images/ocean.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.explanation {
+  background-color: rgba(255, 239, 213, 0.6);
+  border: 60px solid transparent;
+  border-image: url(./images/ropeBorder.png) 20% round;
+}
+
+.explanation h2 {
+  font-size: 2rem;
+}
+
+.explanation h3 span {
+  color: red;
+  font-size: 1.3rem;
+}
+
+.explanation h2,
+.explanation h3 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ship {
+  position: relative;
+  /* top: 50%; */
+  background-image: url(./images/shipAnimationImage.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 512px;
+  height: 200px;
+  animation-name: shipMovement;
+  animation-duration: 35s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes shipMovement {
+  0% {
+    right: 40%;
+    animation-timing-function: ease-in-out;
+  }
+  10% {
+    right: 20%;
+    animation-timing-function: ease-in-out;
+    transform: rotate(2deg);
+  }
+  25% {
+    right: 10%;
+    animation-timing-function: ease-in-out;
+    transform: rotate(-2deg);
+  }
+  35% {
+    right: -10%;
+    transform: rotate(2deg);
+    animation-timing-function: ease-in-out;
+  }
+  50% {    
+    right: -30%; 
+    transform: rotate(-2deg);
+    animation-timing-function: ease-in-out;
+  }
+  60% {
+    right: -50%;
+    transform: rotate(2deg);
+    animation-timing-function: ease-in-out;
+  }
+  75% {    
+    right: -70%;
+    transform: rotate(-2deg);
+    animation-timing-function: ease-in-out;
+  }
+  85% {
+    right: -90%;
+    transform: rotate(2deg);
+    animation-timing-function: ease-in-out;
+  }
+  100% {    
+    right: -110%;
+    transform: rotate(-2deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+.buttons {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 40px;
+  width: 90%;
+}
+
+.buttons button {
+  margin: 10px 0;
+  transition: width 0.5s, height 0.5s;
+  background-size: contain;
+  border-radius: 50%;
+  height: 7rem;
+  width: 7rem;
+  cursor: pointer;
+}
+
+.buttons button:hover,
+.buttons button:focus {
+  height: 7.7rem;
+  width: 7.7rem;
+  transition: 0.5s;
+  transition-timing-function: ease-in;
+  border: 4px solid blue;
+}
+
+.buttonBox button:hover + h2,
+.buttonBox button:focus + h2 {
+  color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.buttonBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 9);
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+.buttonBox h2 {
+  font-size: 1rem;
+}
+
+.humpbackButton {
+  background-image: url(./images/humpbackButton.jpg);
+}
+
+.orcaButton {
+  background-image: url(./images/orcaButton.jpg);
+}
+
+.grayWhaleButton {
+  background-image: url(./images/graywhaleButton.jpg);
+}
+
+.awsdButton {
+  background-image: url(./images/dolphinButton.jpg);
+}
+
+.pwsdButton {
+  background-image: url(./images/pacificdolphinButton.jpg);
+}
+
+.harborPorpoiseButton {
+  background-image: url(./images/harborporpoiseButton.jpg);
+}
+
+.harborSealButton {
+  background-image: url(./images/harborsealButton.jpg);
+}
+
+.nesButton {
+  background-image: url(./images/nesButton.jpg);
+}
+
+.seaOtterButton {
+  background-image: url(./images/seaotterButton.jpg);
+}
+
+.leaflet-container {
+  position: static;
+  height: 450px;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 13%;
+  border: 40px solid transparent;
+  border-image: url(./images/woodBorder.png) 20% round;
+}
+
+.popup {
+  background-image: url(./images/nauticalPaper.jpg);
+  padding: 20px;
+  font-family: 'Nothing You Could Do', cursive;
+  z-index: 1;
+}
+
+.popup p {
+  font-size: 1.2rem;
+}
+
+.popup p span {
+  font-family: 'Sunshiney', cursive;
+  font-size: 2rem;
+}
+
+.whaleThanks span,
+.HEREthanks span,
+.leafletThanks span {
+  color: red;
+  font-size: 1.2rem;
+}
+
+.thanksContainer {
+  display: flex;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: rgba(255, 239, 213, 0.6);
+  border: 40px solid transparent;
+  border-image: url(./images/multicolor-border.png) 20% round;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
 }
 
 .App-header {
@@ -41,11 +283,195 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1660px) {
+  .leaflet-container {
+    margin-top: 15%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1440px) {
+  .leaflet-container {
+    margin-top: 18%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .buttons {
+    flex-wrap: wrap;
+    position: static;
+    justify-content: space-evenly;
+  }
+
+  .buttonBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    padding: 10px;
+    margin: 1px;
+    min-width: 240px;
+  }
+
+  .buttonBox h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+  }
+
+  .buttons button {
+    margin: 10px 0;
+    height: 6rem;
+    width: 6rem;
+  }
+  
+  .buttons button:hover,
+  .buttons button:focus {
+    height: 6rem;
+    width: 6rem;
+    border: 3px solid blue;
+  }
+  
+  .buttonBox button:hover + h2,
+  .buttonBox button:focus + h2 {
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .leaflet-container {
+    margin-top: 0%;
+  }
+}
+
+@media (max-width: 1186px) {
+  .buttonBox {
+    /* flex-basis: 1; */
+    min-width: calc(100% / 3.75);
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .buttonBox {
+    min-width: 30%;
+  }
+}
+
+@media (max-width: 920px) {
+
+  .title {
+    width: 100%;
+  }
+
+  .title h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    padding-bottom: 5px;
+  }
+
+  .explanation {
+    border: 30px solid transparent;
+    border-image: url(./images/ropeBorder.png) 10% round;
+  }
+
+  .explanation h3 {
+    text-align: justify;
+  }
+
+  .buttons {
+    padding-top: 15px;
+  }
+
+  .buttonBox {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 810px) {
+  .buttonBox {
+    max-width: calc(100% / 3);
+  }
+
+  .popup {
+    padding: 10px;
+    width: fit-content;
+  }
+  
+  .popup p {
+    font-size: 1.1rem;
+  }
+
+  .popup p span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .title {
+    border: 20px solid transparent;
+    border-image: url(./images/woodBorder.png) 5% round;
+  }
+
+  .title h1 {
+    font-size: 1.7rem;
+  }
+
+  .explanationContainer {
+    width: auto;
+  }
+
+  .explanation h2 {
+    margin: 0;
+  }
+
+  .explanation h3 {
+    font-size: 1.2rem;  
+    margin: 0;
+  }
+
+  .leaflet-container {
+    border: 20px solid transparent;
+    border-image: url(./images/woodBorder.png) 20% round;
+    width: 90%;
+    margin-right: 2%;
+  }
+
+  .leaflet-popup-content-wrapper {
+    width: 350px;
+  }
+
+  .popup {
+    padding: 0;
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 490px) {
+
+  .title {
+    padding: 0;
+    margin-top: 25px;
+  }
+
+  .title h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .leaflet-container {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 10px solid transparent;
+    border-image: url(./images/woodBorder.png) 20% round;
+  }
+}
+
+@media (max-width: 370px) {
+  .title h1 {
+    font-size: 1.2rem;
   }
 }

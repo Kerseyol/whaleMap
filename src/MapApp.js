@@ -5,17 +5,7 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { map } from 'leaflet';
 import L from 'leaflet';
 import MapContainer from './MapContainer';
-
-export const pointerIcon = new L.Icon({
-  iconUrl: '../assets/galleon.svg',
-  iconRetinaUrl: '../assets/galleon.svg',
-  iconAnchor: [5, 55],
-  popupAnchor: [10, -44],
-  iconSize: [25, 55],
-  shadowUrl: '../assets/galleon.svg',
-  shadowSize: [68, 95],
-  shadowAnchor: [20, 92],
-})
+import { whaleIcon, wheelIcon } from './icons';
 
 class MapApp extends React.Component {
     constructor(props) {
@@ -24,43 +14,62 @@ class MapApp extends React.Component {
             hasLocation: {},
             setLocation: [],
             center: this.props.center,
-            latlng: this.props.latlng
+            species: this.props.species,
+            blurb: ""
             }
+        this.popupCheck = this.popupCheck.bind(this);
+        
     }
-
-    // mapRef = React.createRef();
 
     state = {
         // The map instance to use during cleanup
         map: null
-      };
+    };
 
+    popupCheck() {
+        if(this.props.hasLocation == false) {
+            this.state.blurb = "Yarr, this be placeholder text until you select a button!"
+        } else if(this.props.hasLocation == true) {
+            this.state.blurb = ""
+        }  else if(this.props.sighting.description == "Imported by The Whale Museum.") {
+            this.state.blurb = "Yarr, nothing special was described to the hotline for this sighting."
+      }
+    }
 
-      componentWillUnmount() {
+    componentWillUnmount() {
         // Cleanup after the map to avoid memory leaks when this component exits the page
         this.state.map.dispose();
-      }
+    }
 
     render() {
-
-        return(
-            <div>
- 
+        this.popupCheck();
+        if (this.props.sighting.description == "Imported by The Whale Museum.") {
+        this.state.blurb = "Yarr, nothing special was described to the hotline for this sighting. "
+        }
+    return(
+        <div>
             <Map center={this.props.center} 
-                zoom={this.props.zoom}
-                latlng={this.props.latlng}
-            
+            zoom={this.props.zoom}
+            latlng={this.props.latlng}
             >
             <TileLayer url='https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/reduced.day/{z}/{x}/{y}/512/png8?apiKey=heA-6tHpjc3ORm31QRdJjsjT6VXwmduSS2ogj5jCP8Y&ppi=320'/>
-            <Marker position={this.props.center}>
-            <Popup>
-            {this.props.sighting.description} <br/> Yarr! Let's keep on the lookout for Toby Dick!
-            </Popup>
+            <Marker position={this.props.center} icon={this.props.icon}>
+                <Popup>
+                <div className="popup">
+                <p>
+                `Captain's Log,<br />
+                While steering my ship through the waters of the Pacific Northwest...
+                <br />
+                {this.state.blurb}
+                {this.props.sighting.description} 
+                <br />Warm Regards,<br /><br />
+                <span>Captain Ahab VII</span>
+                </p>
+                </div>
+                </Popup>
             </Marker>
-          
             </Map>
-            
-            </div>
+        </div>
         )
     }
 }

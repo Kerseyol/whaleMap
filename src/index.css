@@ -12,12 +12,3 @@ code {
     monospace;
 }
 
-.leaflet-container {
-  height: 400px;
-  width: 100vw;
-}
-
-.mapContainer {
-  height: 500px;
-  width: 100vw;
-}
