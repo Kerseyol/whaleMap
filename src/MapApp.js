@@ -1,11 +1,7 @@
 import React from 'react';
-import App from './App.js';
 import './App.css';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-import { map } from 'leaflet';
-import L from 'leaflet';
-import MapContainer from './MapContainer';
-import { whaleIcon, wheelIcon } from './icons';
+import { transformWithProjections } from 'ol/proj';
 
 class MapApp extends React.Component {
     constructor(props) {
@@ -27,11 +23,11 @@ class MapApp extends React.Component {
     };
 
     popupCheck() {
-        if(this.props.hasLocation == false) {
+        if(this.props.hasLocation === false) {
             this.state.blurb = "Yarr, this be placeholder text until you select a button!"
-        } else if(this.props.hasLocation == true) {
+        } else if(this.props.hasLocation === true) {
             this.state.blurb = ""
-        }  else if(this.props.sighting.description == "Imported by The Whale Museum.") {
+        }  else if(this.props.sighting.description === "Imported by The Whale Museum.") {
             this.state.blurb = "Yarr, nothing special was described to the hotline for this sighting."
       }
     }
@@ -43,9 +39,10 @@ class MapApp extends React.Component {
 
     render() {
         this.popupCheck();
-        if (this.props.sighting.description == "Imported by The Whale Museum.") {
+        if (this.props.sighting.description === "Imported by The Whale Museum.") {
         this.state.blurb = "Yarr, nothing special was described to the hotline for this sighting. "
-        }
+        
+    }
     return(
         <div>
             <Map center={this.props.center} 

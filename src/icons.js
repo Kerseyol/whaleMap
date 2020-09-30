@@ -1,8 +1,4 @@
-import React from 'react';
-import App from './App.js';
 import './App.css';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-import { map } from 'leaflet';
 import L from 'leaflet';
 import whale from './images/whale.svg';
 import wheel from './images/wheel.svg';

@@ -2,11 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import { preventDefault } from 'ol/events/Event';
-import { map } from 'leaflet';
 import MapApp from './MapApp';
-import { whaleIcon, wheelIcon, shipIcon, humpbackIcon, orcaIcon, graywhaleIcon, dolphinIcon, pacificdolphin, pacificdolphinIcon, harborporpoiseIcon, harborsealIcon, northernsealIcon, seaotterIcon } from './icons';
-import humpbackButton from './images/humpbackButton.jpg';
-import shipAnimationImage from './images/shipAnimationImage.png';
+import { shipIcon, humpbackIcon, orcaIcon, graywhaleIcon, dolphinIcon, pacificdolphinIcon, harborporpoiseIcon, harborsealIcon, northernsealIcon, seaotterIcon } from './icons';
 
 
 class App extends React.Component {
@@ -23,6 +20,7 @@ class App extends React.Component {
         zoom: 4,
         icon: shipIcon
       }
+      this.popup = React.createRef();
       this.handleClickEvent = this.handleClickEvent.bind(this);
       this.abridgeLat = this.abridgeLat.bind(this);
       this.abridgeLng = this.abridgeLng.bind(this);
@@ -37,24 +35,28 @@ class App extends React.Component {
       return Number.parseFloat(lng).toFixed(6);
   };
 
+  closePopup(){
+    this.popup.current.leafletElement.options.leaflet.map.closePopup();
+}
+
   setIcon() {
-    if( this.state.species == 'humpback' ) {
+    if( this.state.species === 'humpback' ) {
         this.state.icon = humpbackIcon
-    } else if( this.state.species == 'orca' ) {
+    } else if( this.state.species === 'orca' ) {
         this.state.icon = orcaIcon
-    } else if(this.state.species == 'gray whale') {
+    } else if(this.state.species === 'gray whale') {
       this.state.icon = graywhaleIcon
-    } else if (this.state.species == 'atlantic white-sided dolphin'){
+    } else if (this.state.species === 'atlantic white-sided dolphin'){
       this.state.icon = dolphinIcon
-    } else if(this.state.species == 'pacific white-sided dolphin'){
+    } else if(this.state.species === 'pacific white-sided dolphin'){
       this.state.icon = pacificdolphinIcon
-    } else if(this.state.species == 'harbor porpoise') {
+    } else if(this.state.species === 'harbor porpoise') {
       this.state.icon = harborporpoiseIcon
-    } else if(this.state.species == 'harbor seal') {
+    } else if(this.state.species === 'harbor seal') {
       this.state.icon = harborsealIcon
-    } else if(this.state.species == "northern elephant seal") {
+    } else if(this.state.species === "northern elephant seal") {
       this.state.icon = northernsealIcon
-    } else if(this.state.species == 'sea otter') {
+    } else if(this.state.species === 'sea otter') {
       this.state.icon = seaotterIcon
     } else {
       this.state.icon = shipIcon
@@ -89,21 +91,15 @@ class App extends React.Component {
   }
 
   render() {
-    const mediaQuery = window.matchMedia('(max-width: 920px)');
-    if(mediaQuery.matches) {
       window.scrollTo({
         top: 1000,
         behavior: 'smooth'
       })
-    }
     let lat = Number(this.abridgeLat(this.state.lat));
     let lng = Number(this.abridgeLng(this.state.lng));
-    let latlng = this.state.latlng
-    let description = this.state.sighting.description;
-    let type = this.state.sighting.species;
+    let latlng = this.state.latlng;
     let hasLocation = this.state.hasLocation; 
     let center = (this.state.center);
-    const placeholder = [22.444454, -111.000054];
     let zoom = this.state.zoom
     let sighting = this.state.sighting
     let species = this.state.species
@@ -178,16 +174,15 @@ class App extends React.Component {
             />
             </div>
             <div className="thanksContainer">
-            <div className="thanks">
-            <p className="whaleThanks">Much thanks for the use of <span>The Whale Hotline API</span>,     documentation and site available at <a href="https://hotline.whalemuseum.org">hotline.whalemuseum.    org</a></p>
-            <p className="HEREthanks">Additionally, much thanks for the use of <span>HERE maps API</span>,    available at <a href="https://developer.here.com/">https://developer.here.com/</a></p>
-            <p className="leafletThanks">Finally, additional thanks to the <span>React Leaflet API</span> for     aiding in the use of the HERE maps API, availble at <a href="https://react-leaflet.js.org/">https://react-leaflet.js.org/</a></p>
-            <p className="portfolioLink">Also, here is a link to <a href="http://www.oliverkersey.com">My Portfolio!</a></p>
-            </div>
+              <div className="thanks">
+              <p className="whaleThanks">Much thanks for the use of <span>The Whale Hotline API</span>,     documentation and site available at <a href="https://hotline.whalemuseum.org">hotline.whalemuseum.    org</a></p>
+             <p className="HEREthanks">Additionally, much thanks for the use of <span>HERE maps API</span>,    available at <a href="https://developer.here.com/">https://developer.here.com/</a></p>
+              <p className="leafletThanks">Finally, additional thanks to the <span>React Leaflet API</span> for     aiding in the use of the HERE maps API, availble at <a href="https://react-leaflet.js.org/">https://react-leaflet.js.org/</a></p>
+              <p className="portfolioLink">Also, here is a link to <a href="http://www.oliverkersey.com">My Portfolio!</a></p>
+              </div>
             </div>
           </div>
         );
       }
     };
 export default App;
-// <img src={shipAnimationImage} className="ship" id="ship"/>
