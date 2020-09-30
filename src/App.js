@@ -64,7 +64,7 @@ class App extends React.Component {
   handleClickEvent(e) {
     preventDefault(e);
     let species = (e.target.id);
-    axios.get(`http://hotline.whalemuseum.org/api.json?species=${species}&limit=1`)
+    axios.get(`//hotline.whalemuseum.org/api.json?species=${species}&limit=1`)
     .then((res) => {
       const sighting = res.data[0];
       this.setState({ 
