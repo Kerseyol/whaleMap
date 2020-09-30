@@ -1,40 +1,38 @@
 {
   "files": {
     "main.css": "/whaleMap/static/css/main.f34d380c.chunk.css",
-    "main.js": "/whaleMap/static/js/main.9127e5da.chunk.js",
-    "main.js.map": "/whaleMap/static/js/main.9127e5da.chunk.js.map",
+    "main.js": "/whaleMap/static/js/main.0180a4fd.chunk.js",
+    "main.js.map": "/whaleMap/static/js/main.0180a4fd.chunk.js.map",
     "runtime-main.js": "/whaleMap/static/js/runtime-main.7c5fa9f5.js",
     "runtime-main.js.map": "/whaleMap/static/js/runtime-main.7c5fa9f5.js.map",
     "static/css/2.f961c21d.chunk.css": "/whaleMap/static/css/2.f961c21d.chunk.css",
-    "static/js/2.696f15ff.chunk.js": "/whaleMap/static/js/2.696f15ff.chunk.js",
-    "static/js/2.696f15ff.chunk.js.map": "/whaleMap/static/js/2.696f15ff.chunk.js.map",
+    "static/js/2.6d98a5d1.chunk.js": "/whaleMap/static/js/2.6d98a5d1.chunk.js",
+    "static/js/2.6d98a5d1.chunk.js.map": "/whaleMap/static/js/2.6d98a5d1.chunk.js.map",
     "index.html": "/whaleMap/index.html",
-    "precache-manifest.4d9b89b060d541117dfa5639e10d8afd.js": "/whaleMap/precache-manifest.4d9b89b060d541117dfa5639e10d8afd.js",
+    "precache-manifest.4a8e23725493bdaa26bc3b1b2b3e5eb6.js": "/whaleMap/precache-manifest.4a8e23725493bdaa26bc3b1b2b3e5eb6.js",
     "service-worker.js": "/whaleMap/service-worker.js",
     "static/css/2.f961c21d.chunk.css.map": "/whaleMap/static/css/2.f961c21d.chunk.css.map",
     "static/css/main.f34d380c.chunk.css.map": "/whaleMap/static/css/main.f34d380c.chunk.css.map",
-    "static/js/2.696f15ff.chunk.js.LICENSE.txt": "/whaleMap/static/js/2.696f15ff.chunk.js.LICENSE.txt",
+    "static/js/2.6d98a5d1.chunk.js.LICENSE.txt": "/whaleMap/static/js/2.6d98a5d1.chunk.js.LICENSE.txt",
     "static/media/dolphin.svg": "/whaleMap/static/media/dolphin.64142b6d.svg",
     "static/media/App.css": "/whaleMap/static/media/woodBorder.4234931a.png",
     "static/media/graywhale.svg": "/whaleMap/static/media/graywhale.0f7b3e68.svg",
     "static/media/harborporpoise.svg": "/whaleMap/static/media/harborporpoise.a95f0de3.svg",
     "static/media/harborseal.svg": "/whaleMap/static/media/harborseal.d8fa608f.svg",
     "static/media/humpback.svg": "/whaleMap/static/media/humpback.e1f67d62.svg",
-    "static/media/humpbackButton.jpg": "/whaleMap/static/media/humpbackButton.93e89dca.jpg",
     "static/media/northernseal.svg": "/whaleMap/static/media/northernseal.e589b51b.svg",
     "static/media/orca.svg": "/whaleMap/static/media/orca.b5c2987b.svg",
     "static/media/pacificdolphin.svg": "/whaleMap/static/media/pacificdolphin.37851ba7.svg",
     "static/media/seaotter.svg": "/whaleMap/static/media/seaotter.5e33a589.svg",
     "static/media/ship.svg": "/whaleMap/static/media/ship.d91067c6.svg",
-    "static/media/shipAnimationImage.png": "/whaleMap/static/media/shipAnimationImage.88b246ea.png",
     "static/media/whale.svg": "/whaleMap/static/media/whale.a1ce04da.svg",
     "static/media/wheel.svg": "/whaleMap/static/media/wheel.4400c796.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7c5fa9f5.js",
     "static/css/2.f961c21d.chunk.css",
-    "static/js/2.696f15ff.chunk.js",
+    "static/js/2.6d98a5d1.chunk.js",
     "static/css/main.f34d380c.chunk.css",
-    "static/js/main.9127e5da.chunk.js"
+    "static/js/main.0180a4fd.chunk.js"
   ]
 }
