@@ -25,6 +25,7 @@ class App extends React.Component {
       this.abridgeLat = this.abridgeLat.bind(this);
       this.abridgeLng = this.abridgeLng.bind(this);
       this.setIcon = this.setIcon.bind(this);
+      this.scrollMap = this.scrollMap.bind(this);
     }
 
   abridgeLat(lat) {
@@ -38,6 +39,10 @@ class App extends React.Component {
   closePopup(){
     this.popup.current.leafletElement.options.leaflet.map.closePopup();
 }
+
+  scrollMap() {
+    document.getElementById('mapdiv').scrollTop = 0
+  }
 
   setIcon() {
     if( this.state.species === 'humpback' ) {
@@ -87,14 +92,13 @@ class App extends React.Component {
       let zoom = this.state.zoom
       this.setIcon();
       this.setState({ center, zoom, species });
+      var mapElement = document.getElementById("mapdiv");
+      mapElement.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
     }); 
   }
 
   render() {
-      window.scrollTo({
-        top: 1000,
-        behavior: 'smooth'
-      })
+
     let lat = Number(this.abridgeLat(this.state.lat));
     let lng = Number(this.abridgeLng(this.state.lng));
     let latlng = this.state.latlng;

@@ -1,7 +1,7 @@
 import './App.css';
 import L from 'leaflet';
 import whale from './images/whale.svg';
-import wheel from './images/wheel.svg';
+// import wheel from './images/wheel.svg';
 import ship from './images/ship.svg';
 import humpback from './images/humpback.svg';
 import orca from './images/orca.svg';
@@ -21,17 +21,17 @@ export const whaleIcon = new L.Icon({
   iconSize: [45, 45],
 })
 
-export const wheelIcon = new L.Icon({
-  iconUrl: wheel,
-  iconRetinaUrl: wheel,
-  iconAnchor: [5, 55],
-  popupAnchor: [10, -44],
-  iconSize: [45, 45],
-})
+// export const wheelIcon = new L.Icon({
+//   iconUrl: wheel,
+//   iconRetinaUrl: wheel,
+//   iconAnchor: [5, 55],
+//   popupAnchor: [10, -44],
+//   iconSize: [45, 45],
+// })
 
 export const shipIcon = new L.Icon({
   iconUrl: ship,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: ship,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
@@ -39,7 +39,7 @@ export const shipIcon = new L.Icon({
 
 export const humpbackIcon = new L.Icon({
   iconUrl: humpback,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: humpback,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
@@ -47,7 +47,7 @@ export const humpbackIcon = new L.Icon({
 
 export const orcaIcon = new L.Icon({
   iconUrl: orca,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: orca,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
@@ -55,7 +55,7 @@ export const orcaIcon = new L.Icon({
 
 export const graywhaleIcon = new L.Icon({
   iconUrl: graywhale,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: graywhale,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
@@ -63,7 +63,7 @@ export const graywhaleIcon = new L.Icon({
 
 export const dolphinIcon = new L.Icon({
   iconUrl: dolphin,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: dolphin,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
@@ -71,7 +71,7 @@ export const dolphinIcon = new L.Icon({
 
 export const pacificdolphinIcon = new L.Icon({
   iconUrl: pacificdolphin,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: pacificdolphin,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
@@ -79,7 +79,7 @@ export const pacificdolphinIcon = new L.Icon({
 
 export const harborporpoiseIcon = new L.Icon({
   iconUrl: harborporpoise,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: harborporpoise,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
@@ -87,7 +87,7 @@ export const harborporpoiseIcon = new L.Icon({
 
 export const harborsealIcon = new L.Icon({
   iconUrl: harborseal,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: harborseal,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
@@ -95,7 +95,7 @@ export const harborsealIcon = new L.Icon({
 
 export const northernsealIcon = new L.Icon({
   iconUrl: northernseal,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: northernseal,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
@@ -103,7 +103,7 @@ export const northernsealIcon = new L.Icon({
 
 export const seaotterIcon = new L.Icon({
   iconUrl: seaotter,
-  iconRetinaUrl: wheel,
+  iconRetinaUrl: seaotter,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [45, 45],
