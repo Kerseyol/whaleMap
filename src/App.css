@@ -211,6 +211,10 @@ body {
   background-image: url(./images/seaotterButton.jpg);
 }
 
+.mapdiv {
+  scroll-behavior: smooth;
+}
+
 .leaflet-container {
   position: static;
   height: 450px;
