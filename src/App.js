@@ -26,6 +26,7 @@ class App extends React.Component {
       this.abridgeLng = this.abridgeLng.bind(this);
       this.setIcon = this.setIcon.bind(this);
       this.scrollMap = this.scrollMap.bind(this);
+      this.scrollBack = this.scrollBack.bind(this);
     }
 
   abridgeLat(lat) {
@@ -42,6 +43,12 @@ class App extends React.Component {
 
   scrollMap() {
     document.getElementById('mapdiv').scrollTop = 0
+  }
+
+  scrollBack() {
+    var buttonsTop = document.getElementById("buttonsID");
+    buttonsTop.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+    document.getElementById('buttonsID').scrollTop = 0
   }
 
   setIcon() {
@@ -126,7 +133,7 @@ class App extends React.Component {
         Then, click the icon on the map for a description of the sighting as reported to the <span>Whale Hotline!</span></h3>
         </div>
         </div>
-          <nav className="buttons">
+          <nav className="buttons" id="buttonsID">
             <div className="buttonBox">
             <button className="humpbackButton" onClick={this.handleClickEvent} id="humpback" />
             <h2>Humpback</h2> 
@@ -177,6 +184,7 @@ class App extends React.Component {
             icon={icon}
             />
             </div>
+            <button onClick={this.scrollBack} id="scrollBackButton">Back to Buttons</button>
             <div className="thanksContainer">
               <div className="thanks">
               <p className="whaleThanks">Much thanks for the use of <span>The Whale Hotline API</span>,     documentation and site available at <a href="https://hotline.whalemuseum.org">hotline.whalemuseum.    org</a></p>
