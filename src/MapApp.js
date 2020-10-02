@@ -50,7 +50,7 @@ class MapApp extends React.Component {
             latlng={this.props.latlng}
             >
             <TileLayer url='https://1.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/reduced.day/{z}/{x}/{y}/512/png8?apiKey=heA-6tHpjc3ORm31QRdJjsjT6VXwmduSS2ogj5jCP8Y&ppi=320'/>
-            <Marker position={this.props.center} icon={this.props.icon}>
+            <Marker position={this.props.center} icon={this.props.icon} closeButton={true}>
                 <Popup>
                 <div className="popup">
                 <p>

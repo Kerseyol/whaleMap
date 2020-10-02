@@ -37,10 +37,6 @@ class App extends React.Component {
       return Number.parseFloat(lng).toFixed(6);
   };
 
-  closePopup(){
-    this.popup.current.leafletElement.options.leaflet.map.closePopup();
-}
-
   scrollMap() {
     document.getElementById('mapdiv').scrollTop = 0
   }
