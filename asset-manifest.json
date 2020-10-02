@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/whaleMap/static/css/main.6e0e0e29.chunk.css",
-    "main.js": "/whaleMap/static/js/main.cf02290b.chunk.js",
-    "main.js.map": "/whaleMap/static/js/main.cf02290b.chunk.js.map",
+    "main.js": "/whaleMap/static/js/main.96c4a48c.chunk.js",
+    "main.js.map": "/whaleMap/static/js/main.96c4a48c.chunk.js.map",
     "runtime-main.js": "/whaleMap/static/js/runtime-main.7c5fa9f5.js",
     "runtime-main.js.map": "/whaleMap/static/js/runtime-main.7c5fa9f5.js.map",
     "static/css/2.f961c21d.chunk.css": "/whaleMap/static/css/2.f961c21d.chunk.css",
     "static/js/2.2919d44a.chunk.js": "/whaleMap/static/js/2.2919d44a.chunk.js",
     "static/js/2.2919d44a.chunk.js.map": "/whaleMap/static/js/2.2919d44a.chunk.js.map",
     "index.html": "/whaleMap/index.html",
-    "precache-manifest.e0bf077ec6829cf6a1922198f6c81ad7.js": "/whaleMap/precache-manifest.e0bf077ec6829cf6a1922198f6c81ad7.js",
+    "precache-manifest.8035587c68c59afee9701fec2f7820ad.js": "/whaleMap/precache-manifest.8035587c68c59afee9701fec2f7820ad.js",
     "service-worker.js": "/whaleMap/service-worker.js",
     "static/css/2.f961c21d.chunk.css.map": "/whaleMap/static/css/2.f961c21d.chunk.css.map",
     "static/css/main.6e0e0e29.chunk.css.map": "/whaleMap/static/css/main.6e0e0e29.chunk.css.map",
@@ -32,6 +32,6 @@
     "static/css/2.f961c21d.chunk.css",
     "static/js/2.2919d44a.chunk.js",
     "static/css/main.6e0e0e29.chunk.css",
-    "static/js/main.cf02290b.chunk.js"
+    "static/js/main.96c4a48c.chunk.js"
   ]
 }
