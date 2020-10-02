@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c00ab42d793f7b7bf2fb3b00efe1460d",
+    "revision": "f75914c6e94a9554239373134ad35110",
     "url": "/whaleMap/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/whaleMap/static/css/2.f961c21d.chunk.css"
   },
   {
-    "revision": "bee6dd225f49defd4603",
-    "url": "/whaleMap/static/css/main.9cdc1f02.chunk.css"
+    "revision": "c9df8f5da15d4daf500a",
+    "url": "/whaleMap/static/css/main.b2b4351a.chunk.css"
   },
   {
     "revision": "b70ab2a470c596a652b4",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/whaleMap/static/js/2.2919d44a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bee6dd225f49defd4603",
+    "revision": "c9df8f5da15d4daf500a",
     "url": "/whaleMap/static/js/main.f4db0f88.chunk.js"
   },
   {
