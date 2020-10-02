@@ -48,7 +48,6 @@ class App extends React.Component {
   scrollBack() {
     var buttonsTop = document.getElementById("buttonsID");
     buttonsTop.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-    document.getElementById('buttonsID').scrollTop = 0
   }
 
   setIcon() {
