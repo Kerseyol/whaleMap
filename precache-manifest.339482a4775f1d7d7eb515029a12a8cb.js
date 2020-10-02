@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c2ed02e78317a10e3915e6346e92ec2b",
+    "revision": "c00ab42d793f7b7bf2fb3b00efe1460d",
     "url": "/whaleMap/index.html"
   },
   {
-    "revision": "732cd7defa8ca774628c",
+    "revision": "b70ab2a470c596a652b4",
     "url": "/whaleMap/static/css/2.f961c21d.chunk.css"
   },
   {
-    "revision": "4a9a9ea0284690298355",
-    "url": "/whaleMap/static/css/main.f34d380c.chunk.css"
+    "revision": "bee6dd225f49defd4603",
+    "url": "/whaleMap/static/css/main.9cdc1f02.chunk.css"
   },
   {
-    "revision": "732cd7defa8ca774628c",
-    "url": "/whaleMap/static/js/2.6d98a5d1.chunk.js"
+    "revision": "b70ab2a470c596a652b4",
+    "url": "/whaleMap/static/js/2.2919d44a.chunk.js"
   },
   {
     "revision": "0580f66cff7a7b2e7b5c118fd842bcfd",
-    "url": "/whaleMap/static/js/2.6d98a5d1.chunk.js.LICENSE.txt"
+    "url": "/whaleMap/static/js/2.2919d44a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4a9a9ea0284690298355",
-    "url": "/whaleMap/static/js/main.0180a4fd.chunk.js"
+    "revision": "bee6dd225f49defd4603",
+    "url": "/whaleMap/static/js/main.f4db0f88.chunk.js"
   },
   {
     "revision": "bbace21f621dc1f55043",
@@ -126,10 +126,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a1ce04da8cecbe8e56dc07efa8f0a852",
     "url": "/whaleMap/static/media/whale.a1ce04da.svg"
-  },
-  {
-    "revision": "4400c796143dacfd4cf6bb5ef547c774",
-    "url": "/whaleMap/static/media/wheel.4400c796.svg"
   },
   {
     "revision": "4234931aa824a9979a9a8afa5b59a8e2",
